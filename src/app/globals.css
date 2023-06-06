@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    width: 100%;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  width: 100%;
+  background-color: #22272e;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable both-edges !important;
+  overflow-y: overlay;
+  overflow: auto;
+}
+
+
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-box-shadow: none !important; 
+}
+::-webkit-scrollbar {
+  width: 0px !important;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
