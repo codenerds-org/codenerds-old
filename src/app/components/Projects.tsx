@@ -86,10 +86,6 @@ function Projects() {
     setCurrentIndex(newIndex);
   };
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
   return (
     <div
      className='flex flex-col w-[100%] group h-screen py-16 px-4 bg-white justify-center items-center'>

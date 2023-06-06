@@ -14,6 +14,6 @@ export default function Anims() {
     }
   };
 
-  return <Lottie options={defaultOptions}     height={200}
-  width={200}/>;
+  return <Lottie options={defaultOptions} height={200}
+    width={200} />;
 }
