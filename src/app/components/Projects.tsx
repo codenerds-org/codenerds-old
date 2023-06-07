@@ -1,45 +1,8 @@
-// import React, { useRef, useState } from "react";
-// import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-// import { RxDotFilled } from 'react-icons/rx';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import { Navigation, Pagination } from "swiper";
-
-
-// function Projects() {
-//   return (
-// <div className='bg-white'>
-//     <Swiper
-//         dir="rtl"
-//         navigation={true}
-//         pagination={{
-//           clickable: true,
-//         }}
-//         modules={[Navigation, Pagination]}
-//         className="mySwiper bg-black"
-//       >
-//         <SwiperSlide>Slide 1</SwiperSlide>
-//         <SwiperSlide>Slide 2</SwiperSlide>
-//         <SwiperSlide>Slide 3</SwiperSlide>
-//         <SwiperSlide>Slide 4</SwiperSlide>
-//         <SwiperSlide>Slide 5</SwiperSlide>
-//         <SwiperSlide>Slide 6</SwiperSlide>
-//         <SwiperSlide>Slide 7</SwiperSlide>
-//         <SwiperSlide>Slide 8</SwiperSlide>
-//         <SwiperSlide>Slide 9</SwiperSlide>
-//       </Swiper>
-//     </div>
-//   );
-// }
-
-// export default Projects;
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer";
 
 function Projects() {
   const slides = [
@@ -85,6 +48,18 @@ function Projects() {
     setCurrentIndex(newIndex);
   };
 
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+    hidden: { opacity: 0, scale: 0 },
+  }
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <section
      className='flex flex-col w-[100%] group h-screen py-16 px-4 bg-white justify-center items-center' id='Projects'>
@@ -93,11 +68,11 @@ function Projects() {
       transition={{ ease: "easeIn", duration: 1 }}
        className='flex text-gray-700 font-bold text-4xl md:text-6xl mb-5'>Our Projects</motion.h1>
       <motion.div
+        ref={ref}
         id='aProjects'
-        viewport={{ once: false}}
-        initial={{ opacity: 0, x: 200}}
-        whileInView={{opacity: 1, x: 0}}
-        transition={{ ease: "easeOut", duration: 0.2}}
+        variants={boxVariant}
+        animate={controls}
+        initial="hidden"
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className='flex w-full md:w-2/3 h-2/3 md:h-full rounded-2xl justify-center items-end bg-center bg-cover duration-500'>
           <div className='flex text-center h-1/3 w-full bg-black opacity-50 z-0'>
