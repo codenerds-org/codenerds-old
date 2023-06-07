@@ -48,16 +48,13 @@ function Navbar() {
               >
                 <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                   <li className="text-white hover:scale-105 hover:drop-shadow-2xl hover:bg-white hover:text-black hover:font-medium px-2 rounded-xl transition">
-                    <a href='#'>About Us</a>
+                    <a href='#About'>About Us</a>
                   </li>
                   <li className="text-white hover:scale-105 hover:drop-shadow-2xl hover:bg-white hover:text-black hover:font-medium px-2 rounded-xl transition">
                     <a href="#Projects" className="scroll-smooth">Projects</a>
                   </li>
                   <li className="text-white hover:scale-105 hover:drop-shadow-2xl hover:bg-white hover:text-black hover:font-medium px-2 rounded-xl transition">
-                    <a>Pricing</a>
-                  </li>
-                  <li className="text-white hover:scale-105 hover:drop-shadow-2xl hover:bg-white hover:text-black hover:font-medium px-2 rounded-xl transition">
-                    <a>Contact</a>
+                    <a href="#Contact">Contact</a>
                   </li>
                 </ul>
               </div>

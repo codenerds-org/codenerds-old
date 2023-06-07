@@ -41,7 +41,6 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 import { motion, useAnimation } from "framer-motion"
 
-
 function Projects() {
   const slides = [
     {
@@ -87,8 +86,8 @@ function Projects() {
   };
 
   return (
-    <div
-     className='flex flex-col w-[100%] group h-screen py-16 px-4 bg-white justify-center items-center'>
+    <section
+     className='flex flex-col w-[100%] group h-screen py-16 px-4 bg-white justify-center items-center' id='Projects'>
       <motion.h1
       animate={{ y: [-100, 0] }}
       transition={{ ease: "easeIn", duration: 1 }}
@@ -118,7 +117,7 @@ function Projects() {
             </div>
           </div>
         </motion.div>
-    </div>
+    </section>
   );
 }
 
