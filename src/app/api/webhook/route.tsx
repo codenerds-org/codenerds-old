@@ -18,7 +18,7 @@ export async function POST(request: Request) {
   try {
     sendWebhook(res.email, res.name, res.message);
     return NextResponse.json({ res });
-  } catch {
-    return NextResponse.json({ res }, { status: 500 });
+  } catch (error: any) {
+    return NextResponse.json({ error }, { status: 500 });
   }
 }
