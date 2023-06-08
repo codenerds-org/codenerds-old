@@ -22,7 +22,7 @@ function Landing() {
   }, [controls, inView]);
 
   return (
-    <div className="h-[40rem] w-[100%]">
+    <div className="h-[40rem] w-full">
       <motion.div
         variants={boxVariant}
         animate="visible"

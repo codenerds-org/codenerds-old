@@ -10,7 +10,7 @@ import React, { useEffect } from "react";
 
 function Footer() {
   return (
-    <div className="h-[12rem] w-[100%]">
+    <div className="h-[12rem] w-full">
       <div className="h-px w-full bg-zinc-600 mt-10 shadow-xl drop-shadow-2xl"></div>
       <div className="flex flex-col items-center">
         <h1 className="flex text-5xl font-bold my-3 text-white">CODENERDS</h1>

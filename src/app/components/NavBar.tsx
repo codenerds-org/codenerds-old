@@ -17,7 +17,7 @@ function Navbar() {
     <motion.div
       animate={{ y: [-100, 0] }}
       transition={{ ease: "easeIn", duration: 1 }}
-      className="h-1/2 w-[100%] bg-[#22272e]"
+      className="h-1/2 w-full bg-[#22272e]"
     >
       <div>
         <nav className="w-full bg-[#22272e] shadow">

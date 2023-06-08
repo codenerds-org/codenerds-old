@@ -12,18 +12,18 @@ export default function Home() {
       <div id="gray">
         <Navbar />
         <Landing />
-        <div className="w-[100%] h-[100px] bg-white">
+        <div className="w-full h-[100px] bg-white">
           <svg
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
             overflow="visible"
-            className="w-[100%] h-[100%]"
+            className="w-full h-[100%]"
           >
             <polygon points="0,100 100,0 0,0" className="fill-[#22272e]" />
           </svg>
         </div>
       </div>
-      <div className="bg-white w-[100%] h-screen">
+      <div className="bg-white w-full h-screen">
         <Projects />
       </div>
       <Contact />

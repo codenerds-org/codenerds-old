@@ -31,7 +31,7 @@ function Contact() {
   };
 
   return (
-    <div className="flex flex-col w-[100%] h-[40rem] justify-center items-center">
+    <div className="flex flex-col w-full h-[40rem] justify-center items-center">
       <h1 className="text-white my-5 font-bold text-4xl md:text-6xl mb-5">
         Contact Us!
       </h1>
