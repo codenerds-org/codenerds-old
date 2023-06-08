@@ -33,11 +33,9 @@ body {
   overflow: auto;
 }
 
-
-
 ::-webkit-scrollbar-track {
   background-color: transparent;
-  -webkit-box-shadow: none !important; 
+  -webkit-box-shadow: none !important;
 }
 ::-webkit-scrollbar {
   width: 0px !important;

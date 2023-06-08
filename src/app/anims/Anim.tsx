@@ -10,10 +10,9 @@ export default function Anim() {
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
       className: "lottie-svg-class",
-      id: "lottie-svg-id"
-    }
+      id: "lottie-svg-id",
+    },
   };
 
-  return <Lottie options={defaultOptions}     height={400}
-  width={400}/>;
+  return <Lottie options={defaultOptions} height={400} width={400} />;
 }
