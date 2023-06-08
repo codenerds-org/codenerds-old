@@ -35,7 +35,7 @@ function Contact() {
       <h1 className="text-white my-5 font-bold text-4xl md:text-6xl mb-5">
         Contact Us!
       </h1>
-      <div className="flex h-5/6 w-2/6 text-center rounded-xl bg-[#FEFEFE] border border-zinc-700 shadow-xl py-5 px-8">
+      <div className="flex h-5/6 w-5/6 xl:w-2/6 text-center rounded-xl bg-[#FEFEFE] border border-zinc-700 shadow-xl py-5 px-8">
         <div className="flex flex-col w-full">
           <div className="flex flex-col mb-12">
             <h1 className="w-full h-min text-gray-700 font-medium text-2xl justify-start">
@@ -45,7 +45,7 @@ function Contact() {
               Every client is very important for us.
             </h2>
           </div>
-          <div className="flex flex-col w-2/3 h-full">
+          <div className="flex flex-col w-full md:w-2/3 h-full">
             <form onSubmit={handleSubmit}>
               <div className="relative z-0 w-full mb-6 group">
                 <input
@@ -105,7 +105,7 @@ function Contact() {
             </form>
           </div>
         </div>
-        <div className="flex align-center justify-center items-center w-1/3">
+        <div className="hidden md:flex align-center justify-center items-center w-1/3">
           <Anims />
         </div>
       </div>
