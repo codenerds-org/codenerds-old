@@ -8,6 +8,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Codenerds",
   description: "Welcome to Codenerds",
+  icons: {
+    icon: '/favicon.png',
+  }
 };
 
 export default function RootLayout({
