@@ -12,25 +12,9 @@ function Projects() {
       url: "https://github.com/Style77/wazonowo.net/raw/main/img_3.png",
     },
     {
-      name: "Wazonowo.net",
-      gurl: "https://github.com/Style77/wazonowo.net/raw/main/img_3.png",
-      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
-    },
-    {
-      name: "Wazonowo.net",
-      gurl: "https://github.com/Style77/wazonowo.net/raw/main/img_3.png",
-      url: "https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80",
-    },
-
-    {
-      name: "Wazonowo.net",
-      gurl: "https://github.com/Style77/wazonowo.net/raw/main/img_3.png",
-      url: "https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80",
-    },
-    {
-      name: "Wazonowo.net",
-      gurl: "https://github.com/Style77/wazonowo.net/raw/main/img_3.png",
-      url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
+      name: "Velluci",
+      gurl: "https://github.com/codenerds-org/velluci",
+      url: "https://media.discordapp.net/attachments/1115753924033523783/1116438360249094154/image.png?width=1245&height=671",
     },
   ];
 
@@ -79,9 +63,9 @@ function Projects() {
         animate={controls}
         initial="hidden"
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="flex w-full md:w-2/3 h-2/3 md:h-full rounded-2xl justify-center items-end bg-center bg-cover duration-500"
+        className="flex w-full md:w-2/3 h-2/3 md:h-full rounded-2xl justify-center items-end overflow-hidden bg-no-repeat bg-cover"
       >
-        <div className="flex text-center h-1/3 w-full bg-black opacity-50 z-0">
+        <div className="flex text-center h-1/6 w-full bg-black bg-opacity-50 z-0">
           <div className="flex justify-start w-full items-center px-3 z-1">
             <div className="flex hidden group-hover:block align-start items-start justify-start text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
               <BsChevronCompactLeft onClick={prevSlide} size={30} />

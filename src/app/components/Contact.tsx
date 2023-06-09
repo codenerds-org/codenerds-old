@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
 import Anims from "../anims/Anims";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -29,13 +30,40 @@ function Contact() {
       alert("Wystąpił błąd podczas wysyłania wiadomości.");
     }
   };
+  const h1Variant = {
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.9 } },
+    hidden: { opacity: 0, scale: 1, y: -150, },
+  };
+  const divVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.9 } },
+    hidden: { opacity: 0, scale: 0 },
+  };
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+
 
   return (
     <div className="flex flex-col w-full h-[40rem] justify-center items-center">
-      <h1 className="text-white my-5 font-bold text-4xl md:text-6xl mb-5">
+      <motion.h1
+        ref={ref}
+        variants={h1Variant}
+        animate={controls}
+        initial="hidden"
+        className="text-white my-5 font-bold text-4xl md:text-6xl mb-5">
         Contact Us!
-      </h1>
-      <div className="flex h-5/6 w-5/6 xl:w-2/6 text-center rounded-xl bg-[#FEFEFE] border border-zinc-700 shadow-xl py-5 px-8">
+      </motion.h1>
+      <motion.div
+        ref={ref}
+        variants={divVariant}
+        animate={controls}
+        initial="hidden"
+        className="flex h-5/6 w-5/6 xl:w-2/6 text-center rounded-xl bg-[#FEFEFE] border border-zinc-700 shadow-xl py-5 px-8">
         <div className="flex flex-col w-full">
           <div className="flex flex-col mb-12">
             <h1 className="w-full h-min text-gray-700 font-medium text-2xl justify-start">
@@ -108,7 +136,7 @@ function Contact() {
         <div className="hidden md:flex align-center justify-center items-center w-1/3">
           <Anims />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
